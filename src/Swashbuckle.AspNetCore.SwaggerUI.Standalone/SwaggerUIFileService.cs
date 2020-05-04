@@ -31,7 +31,7 @@ namespace SwashBuckle.AspNetCore.SwaggerUI.Standalone
             _jsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase, false));
         }
 
-        public HttpResponseMessage CreateResponse(string path)
+        public HttpResponseMessage GetFileResponse(string path)
         {
             const string httpMethod = "GET";
             var response = new HttpResponseMessage();

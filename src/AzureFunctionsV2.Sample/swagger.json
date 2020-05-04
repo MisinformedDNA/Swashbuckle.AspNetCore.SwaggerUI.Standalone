@@ -1,0 +1,44 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Example API",
+    "description": "Example API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Run": {
+      "get": {
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  }
+}
