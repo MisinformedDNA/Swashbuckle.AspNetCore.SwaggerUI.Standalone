@@ -36,7 +36,8 @@ namespace SwashBuckle.AspNetCore.SwaggerUI.Standalone
             const string httpMethod = "GET";
             var response = new HttpResponseMessage();
 
-            if (httpMethod == "GET" && Regex.IsMatch(path, $@"(^index\.html$|^$)"))
+            if (httpMethod == "GET" &&
+                (string.IsNullOrEmpty(path) || Regex.IsMatch(path, $@"^index\.html$")))
             {
                 RespondWithIndexHtml(response);
                 return response;
