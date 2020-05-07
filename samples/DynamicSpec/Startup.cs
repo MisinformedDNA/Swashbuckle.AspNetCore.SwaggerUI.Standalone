@@ -3,7 +3,7 @@ using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.AzureFunctions.Extensions;
-using SwashBuckle.AspNetCore.SwaggerUI.Standalone;
+using Swashbuckle.AspNetCore.SwaggerUI.Standalone;
 using System.Reflection;
 
 [assembly: FunctionsStartup(typeof(DynamicSpec.Startup))]
@@ -30,7 +30,7 @@ namespace DynamicSpec
                 });
             });
 
-            builder.Services.AddTransient<SwaggerUIFileService>();
+            builder.Services.AddTransient<SwaggerUIService>();
             builder.Services.AddSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/api/swagger.json", "v1");
