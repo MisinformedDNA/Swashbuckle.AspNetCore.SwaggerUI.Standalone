@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>MisinformedDNA</Authors>
+    <RepositoryUrl>https://github.com/MisinformedDNA/Swashbuckle.AspNetCore.SwaggerUI.Standalone</RepositoryUrl>
+    <Version>1.0.0-beta</Version>
   </PropertyGroup>
 
   <ItemGroup>
