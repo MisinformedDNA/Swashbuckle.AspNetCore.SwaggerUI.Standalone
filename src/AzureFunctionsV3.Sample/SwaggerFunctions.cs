@@ -1,7 +1,7 @@
 ﻿using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
-using SwashBuckle.AspNetCore.SwaggerUI.Standalone;
+using Swashbuckle.AspNetCore.SwaggerUI.Standalone;
 using System.IO;
 using System.Net.Http;
 
@@ -9,9 +9,9 @@ namespace AzureFunctionsV3.Sample
 {
     public class SwaggerFunctions
     {
-        private readonly SwaggerUIFileService _swaggerService;
+        private readonly SwaggerUIService _swaggerService;
 
-        public SwaggerFunctions(SwaggerUIFileService swaggerService)
+        public SwaggerFunctions(SwaggerUIService swaggerService)
         {
             _swaggerService = swaggerService;
         }

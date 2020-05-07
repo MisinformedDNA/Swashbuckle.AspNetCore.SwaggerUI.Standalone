@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Builder;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -7,19 +8,16 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
-using Microsoft.AspNetCore.Builder;
-using Swashbuckle.AspNetCore.SwaggerUI;
-using Swashbuckle.AspNetCore.SwaggerUI.Standalone;
 
-namespace SwashBuckle.AspNetCore.SwaggerUI.Standalone
+namespace Swashbuckle.AspNetCore.SwaggerUI.Standalone
 {
-    public class SwaggerUIFileService
+    public class SwaggerUIService
     {
         private readonly SwaggerUIOptions _options;
         private readonly SwaggerFileProvider _staticFileProvider;
         private readonly JsonSerializerOptions _jsonSerializerOptions;
 
-        public SwaggerUIFileService(SwaggerUIOptions options)
+        public SwaggerUIService(SwaggerUIOptions options)
         {
             _options = options ?? new SwaggerUIOptions();
 

@@ -1,5 +1,5 @@
 ﻿using Swashbuckle.AspNetCore.SwaggerUI;
-using SwashBuckle.AspNetCore.SwaggerUI.Standalone;
+using Swashbuckle.AspNetCore.SwaggerUI.Standalone;
 using System;
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -10,7 +10,7 @@ namespace Microsoft.Extensions.DependencyInjection
             this IServiceCollection services,
             Action<SwaggerUIOptions> setupAction = null)
         {
-            services.AddTransient<SwaggerUIFileService>();
+            services.AddTransient<SwaggerUIService>();
             services.AddSingleton(s =>
             {
                 var options = new SwaggerUIOptions();

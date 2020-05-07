@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.FileProviders;
-using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
