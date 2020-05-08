@@ -3,7 +3,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.AzureFunctions.Annotations;
 using Swashbuckle.AspNetCore.AzureFunctions.Extensions;
-using SwashBuckle.AspNetCore.SwaggerUI.Standalone;
+using Swashbuckle.AspNetCore.SwaggerUI.Standalone;
 using System;
 using System.Net.Http;
 
@@ -12,10 +12,9 @@ namespace DynamicSpec
     public class SwaggerFunctions
     {
         private readonly IServiceProvider _serviceProvider;
-        private readonly SwaggerUIFileService _swaggerService;
+        private readonly SwaggerUIService _swaggerService;
 
-        public SwaggerFunctions(IServiceProvider serviceProvider
-            , SwaggerUIFileService swaggerService
+        public SwaggerFunctions(IServiceProvider serviceProvider, SwaggerUIService swaggerService
             )
         {
             _serviceProvider = serviceProvider;
